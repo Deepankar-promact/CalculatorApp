@@ -1,4 +1,4 @@
-language: Android
+language: android
 android:
 	components:
 		- build-tools-25.0.2
@@ -7,10 +7,5 @@ script:
     - ./gradlew build connectedCheck
     
 skip_cleanup: true
-deploy:
-  provider: releases
-  file: "CalculatorApp/build/outputs/apk/app-release.apk"
-  on:
-    repo: Deepankar-promact/CalculatorApp
 
    
