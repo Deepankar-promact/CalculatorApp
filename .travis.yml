@@ -5,4 +5,12 @@ android:
 		- android-25
 script:
     - ./gradlew build connectedCheck
+    
+skip_cleanup: true
+deploy:
+  provider: releases
+  file: "CalculatorApp/build/outputs/apk/app-release.apk"
+  on:
+    repo: Deepankar-promact/CalculatorApp
+
    
