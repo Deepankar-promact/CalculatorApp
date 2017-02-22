@@ -1,0 +1,8 @@
+language: Android
+android:
+	components:
+		- build-tools-25.0.2
+		- android-25
+		- extra
+env:
+    - ANDROID_SDKS=android-25,sysimg-19 ANDROID_TARGET=android-19
