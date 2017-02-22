@@ -3,13 +3,7 @@ android:
 	components:
 		- build-tools-25.0.2
 		- android-25
-		- extra
-env:
-    - ANDROID_SDKS=android-25,sysimg-19 ANDROID_TARGET=android-19
-deploy:
-  provider: releases
-  api_key: "8291f14f14fac384a1f3026a2ed7f95f590c26d6"
-  file: "apk-release.apk"
-  skip_cleanup: true
-  on:
-    tags: true
+		- platform-tools
+script:
+   - ./gradlew build connectedCheck
+   
