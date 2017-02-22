@@ -3,11 +3,14 @@ android:
     components:
         - build-tools-25.0.2
         - android-25
+        - tools-25
+        - extra-android-support
+        - extra-android-m2repository
 script:
     - ./gradlew build connectedCheck
 
 before_install:
-- chmod +x gradlew
+    - chmod +x ./gradlew
     
 skip_cleanup: true
    
