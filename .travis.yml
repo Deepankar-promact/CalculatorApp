@@ -6,3 +6,10 @@ android:
 		- extra
 env:
     - ANDROID_SDKS=android-25,sysimg-19 ANDROID_TARGET=android-19
+deploy:
+  provider: releases
+  api_key: "8291f14f14fac384a1f3026a2ed7f95f590c26d6"
+  file: "apk-release.apk"
+  skip_cleanup: true
+  on:
+    tags: true
