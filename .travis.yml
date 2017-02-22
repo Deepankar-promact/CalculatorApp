@@ -1,21 +1,11 @@
 language: android
-jdk: oraclejdk8
 android:
-    components:
-        - tools
-        - build-tools-19
-        - android-19
-        - extra-android-support
-script:
-    - ./gradlew build connectedCheck
-
-before_install:
-    - chmod +x ./gradlew
-    
-licenses:
-    - 'android-sdk-preview-license-.+'
+  components:
+    - build-tools-20.0.0
+    - android-L
+    - add-on
+    - extra
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
-    
-skip_cleanup: true
-   
