@@ -2,11 +2,14 @@ language: android
 jdk: oraclejdk8
 android:
   components:
-    - build-tools-20.0.0
-    - android-L
-    - add-on
-    - extra
+    - tools
+    - build-tools-25.0.2
+    - android-25
+    - extra-android-support
+    
   licenses:
-    - 'android-sdk-preview-license-52d11cd2'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
+    - android-sdk-preview-license-52d11cd2
+    - android-sdk-license-.+
+    - google-gdk-license-.+
+before_install: 
+  - "chmod +x gradlew"
