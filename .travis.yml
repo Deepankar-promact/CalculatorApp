@@ -23,7 +23,7 @@ cache:
     - $HOME/.android/build-cache
 
 after_success:
-    - ls
+    - tree
 
 deploy:
   provider: releases
