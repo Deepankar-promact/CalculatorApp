@@ -11,5 +11,13 @@ android:
 
 jdk:
     - oraclejdk8
+    
+deploy:
+    provider: release
+    file: app/build/outputs/apk/app-release.apk
+    skip_cleanup: true
+    on:
+    repo: Deepankar-promact/CalculatorApp
+    tags: true
 script:
 - ./gradlew build
