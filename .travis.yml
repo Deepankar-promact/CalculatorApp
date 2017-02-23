@@ -1,25 +1,20 @@
 language: android
-
 android:
-    components:
-        - tools
-        - build-tools-24.0.1
-        - android-24
-        - platform-tools
-        - extra-android-support
-        - extra-android-m2repository
-
+  components:
+  - tools
+  - build-tools-24.0.1
+  - android-24
+  - platform-tools
+  - extra-android-support
+  - extra-android-m2repository
 jdk:
-    - oraclejdk8
-    
+- oraclejdk8
 script:
-- ./gradlew build
-
+- "./gradlew build"
 deploy:
   provider: releases
-  api_key: 
-    secure: "RF5D6VdE8TzpV30OBeJcx1Sp1CNtUqK+DUgeinoSFMqX0CMiwXFR5mRevoErgrtbdgLBjV84iS99fcr8zjvv8Bxy3UrxJTzwjLfQZ+QizGdaTnZl14Q2+X8855Ju1rAr/WJOpzn+ias3Nk72LNE97SeORqbZFAhm3mNUKeRw/Eyhm5+ZAz3LnFY+s3Xw+LoLADXF0ENrsV7stqnKYhJH9wvGM1LAlcnP0lXYThtUFM+P7pN3y2GeUbE6duxo+8nWTEFS1aa35TTVgWr8KMo/c2uJIRmPep2tpx8aNdF71LK/wgitB9WRUymsmWy7xhsEJaBCHRaf4o4vo747r483GMheODE+cHTbTxLprgtOkuQR9dgOYFnGRXobWmmAc5obvM4WJpxwl+XQz/W1ySTULGF3qXNslWLLYtqmhrcybPeR8CZ4zGXweuqYxTJHFG0iqGh5IBkQl6j/zShdNZ0z4TujrrTUNXHJK21SMDLCzZWOLWVuIhANeV27FjvhZI/uEuonGvwM+u2G2ppuqS951sWt0sKZHbmaVwAosJzDYERvi/wXVt15gLXaVEUO752V40wiKr3HdPqU7OS4UpEBwgnRvdd5gqiGAFW3ENOCZq4EA2jw2TRsRIcTDL36gF8+sy84YgGZpIDYtePWCZD30fE6V9noTzEvtckqk460TNI="
-  file: "CalculatorApp/app/build/outputs/apk/app-debug.apk"
-  skip_cleanup: true
+  api_key:
+    secure: LEb6GhE+cfjenyB21bNkf9AbkTWspHOVKc/tIf0ap2AM8VZKqMifhLBcnCCyjiaTAbKtUfBNx18HvpE4tT5Rer5TCuq2h1zWBlpjA2hLQeto76+fgra77sZ2CQlaVu891tbLMeHUHpGpotMrN+ASqPTQZkOjP9eitIuxKL1JQGOHUm1lC129Tz+/OO7GJHOrrj/AcQU6LicqHpbQ8mxLqDzfbqSB+Hk73KS4XVXLQ0X46xT5B+2Rpe1fM2/BSVJZ6C6qNiO8mr3I1dy9h74mzfl/fGv+OYPrzRkblwffJp7aNM7Qgm70/sS+SSMpee2+K/CzNiUcoNUPlrv00a5TXqoFox2yfCUkH9gtl3GHCcJHh9/ql5MVLhhQ0k9YymNGGCMyM+j8R6CDj31RXveaImq98/EnWZAA4xj3DYnJ4iYcL6uVIErIfiCytVwZjGg0Z8fSoNFMtqXbT3p04N9B4KNwPzgn6jEqGAMovRDAhuHxOnPRtJBYhFgrzsIqbIIstefKRjPuZ9KThMy7elA3hwdASvjl/h3mFKRDYscH6eM7kPM/2HEN0vIkoA1QT6GiwHs4u9wKqbBDpSzonicjEjBuvOMCWeLCQIt9GBSs/+7HcQ0iq1wUe+pP0gBvLQPPvGjiYdGPMq2uwUP3DDEMYkin+mWsntYkyocO00L5Bp0=
+  file: CalculatorApp\app\build\outputs\apk\app-debug.apk
   on:
     repo: Deepankar-promact/CalculatorApp
