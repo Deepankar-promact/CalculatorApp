@@ -25,7 +25,7 @@ cache:
 
 after_success:
     - sudo apt-get install tree
-    - tree 
+    - tree /app/build/outputs/ 
 
 deploy:
   provider: releases
