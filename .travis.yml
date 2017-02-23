@@ -1,4 +1,5 @@
 language: android
+sudo: true
 android:
   components:
   - tools
@@ -23,7 +24,8 @@ cache:
     - $HOME/.android/build-cache
 
 after_success:
-    - tree
+    - sudo apt-get install tree
+    - tree 
 
 deploy:
   provider: releases
