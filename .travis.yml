@@ -1,23 +1,15 @@
 language: android
-jdk: oraclejdk8
-    
-env:
-  global:
-    - ANDROID_TOOLS_URL="https://dl.google.com/android/repository/tools_r25.0.2-linux.zip"
-before_script:
-  # Install Android stuff
-  - curl -L $ANDROID_TOOLS_URL -o $HOME/tools.zip
-  - unzip -oq $HOME/tools.zip -d $ANDROID_HOME
-  - mkdir $ANDROID_HOME/licenses
-  - echo -ne "\n8933bad161af4178b1185d1a37fbf41ea5269c55" >> $ANDROID_HOME/licenses/android-sdk-license
-  - echo -ne "\n84831b9409646a918e30573bab4c9c91346d8abd\n504667f4c0de7af1a06de9f4b1727b84351f2910" >> $ANDROID_HOME/licenses/android-sdk-preview-license
-  - $ANDROID_HOME/tools/bin/sdkmanager tools
-  - $ANDROID_HOME/tools/bin/sdkmanager platform-tools
-  - $ANDROID_HOME/tools/bin/sdkmanager 'build-tools;25.0.2'
-  - $ANDROID_HOME/tools/bin/sdkmanager 'platforms;android-25'
-  - $ANDROID_HOME/tools/bin/sdkmanager 'extras;android;m2repository'
-  - $ANDROID_HOME/tools/bin/sdkmanager 'extras;google;m2repository'
 
-    
-before_install: 
-  - "chmod +x gradlew"
+android:
+    components:
+        - tools
+        - build-tools-24.0.1
+        - android-24
+        - platform-tools
+        - extra-android-support
+        - extra-android-m2repository
+
+jdk:
+    - oraclejdk8
+script:
+- ./gradlew build
