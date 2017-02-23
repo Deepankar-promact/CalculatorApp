@@ -1,5 +1,10 @@
 language: android
 jdk: oraclejdk8
+    
+env:
+  global:
+    - ANDROID_TOOLS_URL="https://dl.google.com/android/repository/tools_r25.2.3-linux.zip"
+    
 android:
   components:
     - tools
