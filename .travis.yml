@@ -1,5 +1,4 @@
 language: android
-sudo: true
 android:
   components:
   - tools
@@ -23,10 +22,6 @@ cache:
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
 
-after_success:
-    - sudo apt-get install tree
-    - tree /app/build/outputs/ 
-
 deploy:
   provider: releases
   skip_cleanup: true
@@ -35,3 +30,4 @@ deploy:
   file: ./app/build/outputs/apk/app-release-unsigned.apk
   on:
     repo: Deepankar-promact/CalculatorApp
+    tags: true
